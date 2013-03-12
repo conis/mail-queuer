@@ -14,14 +14,14 @@ mail-queuer还有一个特点就是可以根据模板(jade)渲染邮件，并且
 
 ### 邮件队列服务器
 
-1. 引入定义及配置mongoose
+1.引入定义及配置mongoose
 
-    var nodemailer = require("nodemailer");
-    var mongoose = require("mongoose");
-    var mailQueuer = require('mail-queuer');
-    mongoose.connect('mongodb://localhost/mail-queuer');
+      var nodemailer = require("nodemailer");
+      var mongoose = require("mongoose");
+      var mailQueuer = require('mail-queuer');
+      mongoose.connect('mongodb://localhost/mail-queuer');
 
-2. 创建一个发送邮件的函数
+2.创建一个发送邮件的函数
 
 通常一个发送邮件的函数如下所示，在`options`参数中，提供`options.subject`(邮件主题)、`options.html`(邮件内容)、`options.to`(收件)、
 
@@ -52,7 +52,7 @@ mail-queuer还有一个特点就是可以根据模板(jade)渲染邮件，并且
       });
     };
 
-3. 在configure中，初始化中间件
+3.在configure中，初始化中间件
 
     var options = {
       //模板路径
@@ -74,7 +74,7 @@ mail-queuer还有一个特点就是可以根据模板(jade)渲染邮件，并且
     };
     app.use(mailQueuer.initialize(mongoose, options, sendMail));
 
-4. 添加新建邮件任务的路由
+4.添加新建邮件任务的路由
 
     app.get("/addTask", function(req, res, next){
       mailQueuer.newTask(req, res, next);
