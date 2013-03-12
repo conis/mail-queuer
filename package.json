@@ -1,0 +1,41 @@
+{
+  "name": "mail-queuer",
+  "version": "0.0.1",
+  "description": "邮件队列发送",
+  "main": "./lib/mail-queuer",
+  "dependencies": {
+    "mongoose": "*",
+    "jade": "*"
+  },
+  "maintainers": [
+    {
+      "name": "Conis",
+      "email": "conis.yi@gmail.com"
+    }
+  ],
+  "homepage": "http://github.com/conis/mail-queuer",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/conis/mail-queuer.git"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/andris9/nodemailer/blob/master/LICENSE"
+    }
+  ],
+  "devDependencies": {
+    "express": ">=3.x"
+  },
+  "engine": {
+    "node": ">=0.6"
+  },
+  "keywords": [
+    "e-mail",
+    "queue",
+    "email",
+    "mail",
+    "sendmail"
+  ],
+  "license": "MIT"
+}
